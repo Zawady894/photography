@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zawady Photography</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0f172a;
+    color:white;
+}
+
+/* WATERMARK */
+body::before{
+    content:"ZAWADY • 0725159776 • ZAWADY • 0725159776";
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-30deg);
+    font-size:45px;
+    opacity:0.06;
+    white-space:nowrap;
+    pointer-events:none;
+}
+
+header{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+}
+
+header h1{
+    color:#facc15;
+}
+
+nav button{
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#1f2937;
+    color:white;
+}
+
+nav button:hover{
+    background:#facc15;
+    color:black;
+}
+
+.section{
+    padding:30px;
+}
+
+h2{
+    text-align:center;
+    color:#facc15;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:12px;
+    border:2px solid #374151;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+    border-color:#facc15;
+}
+
+.contact{
+    text-align:center;
+    padding:40px;
+    background:#111827;
+}
+
+.contact a{
+    background:#25D366;
+    padding:12px 18px;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📸 ZAWADY PHOTOGRAPHY</h1>
+
+<nav>
+<button onclick="show('weddings')">Weddings</button>
+<button onclick="show('birthdays')">Birthdays</button>
+<button onclick="show('graduations')">Graduations</button>
+<button onclick="show('sports')">Sports</button>
+</nav>
+</header>
+
+<!-- WEDDINGS -->
+<section id="weddings" class="section">
+<h2>💍 Weddings</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf">
+<img src="https://images.unsplash.com/photo-1529634894890-2a4c1b0c0a6f">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+<img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b">
+</div>
+</section>
+
+<!-- BIRTHDAYS -->
+<section id="birthdays" class="section" style="display:none;">
+<h2>🎉 Birthdays</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce">
+<img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92">
+<img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77">
+<img src="https://images.unsplash.com/photo-1513151233558-d860c5398176">
+</div>
+</section>
+
+<!-- GRADUATIONS -->
+<section id="graduations" class="section" style="display:none;">
+<h2>🎓 Graduations</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1">
+<img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
+</div>
+</section>
+
+<!-- SPORTS -->
+<section id="sports" class="section" style="display:none;">
+<h2>⚽ Sports Events</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2">
+<img src="https://images.unsplash.com/photo-1517649763962-0c623066013b">
+<img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d">
+<img src="https://images.unsplash.com/photo-1543357480-c60d400e2f3a">
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+<h2>📞 Contact Me</h2>
+<p>Book your event today</p>
+
+<a href="https://wa.me/254725159776" target="_blank">
+WhatsApp Me
+</a>
+
+<p style="margin-top:15px;">Social Media: @zawady</p>
+</section>
+
+<script>
+function show(id){
+    let sections = document.querySelectorAll(".section");
+    sections.forEach(s => s.style.display="none");
+    document.getElementById(id).style.display="block";
+}
+</script>
+
+</body>
